@@ -21,6 +21,8 @@ namespace MP1_Rest_Client.Controllers
         }
 
         // GET: api/Images
+        // Or
+        // GET: api/Images/?username={username}
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Image>>> GetImages(string username = "")
         {
@@ -42,15 +44,6 @@ namespace MP1_Rest_Client.Controllers
 
             return image;
         }
-
-
-        //// GET: api/Images/?username={username}
-        //[HttpGet()]
-        //public async Task<ActionResult<IEnumerable<Image>>> GetImagesByUserName(string username)
-        //{
-        //    var images = await _context.Images.Where(i => i.UserName == username).ToListAsync();
-        //    return images;
-        //}
 
 
         // PUT: api/Images/5
